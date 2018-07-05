@@ -86,18 +86,16 @@ them all on seperate pages -->
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
       
       <h2>KnockLock</h2>
-      <p>TODO: Find the website</p>
       
       <h2>EEBug</h2>
       
       <h2>MIDI keyboard and scanning matrix tester</h2>
       <p>As you probably have gathered from the rest of this website, I really,
-      really like music. Having access to my Dad's old piano completely 
+      really like music. Having access to my Dad's old Bently piano completely 
       changed my life. However, most other people are not so priveledged. Even
-      today, music can be an often unacceptably expensive field to get into. Indeed,
-      owning a piano is still probably one of the most sterotypical signs of
-      being middle class. As a challenge, and to aquaint myself with the still
-      (at the time) mysterious art of electronics, I decided to build a capable
+      today, music can be an unacceptably expensive field to get into. Indeed,
+      owning a piano is still probably one of the most sterotypical signs that
+      someone is middle class. As a challenge, I decided to build a capable
       electronic keyboard, but making it as cheap as possible. To do this, I 
       used a broken Casio SA-46 keyboard I bought off eBay. I completely 
       stripped out the innards and gave it MIDI functionality using a £1.50
@@ -105,62 +103,20 @@ them all on seperate pages -->
       </p>
       
       <h1>Projects in progress</h1>
-      
       <h2>Habitica/Trello task syncing</h2>
-      <h3>Using Tasker for Android</h3>
-      <h3>Why Habitica?</h3>
-      <p>I consider myself unfortunately overburdened with more curiosity than is probably healthy, and often find 
-      effective time management difficult. I also struggle with planning and task
-      prioritizing. Luckily, I have found salvation in
+      <h3></h3>
+      <p>
+      I consider myself overburdened with too much curiosity, and often find 
+      effective time management difficult. I also struggle with planning and
+      prioritizing which tasks need doing. Luckily, I have found salvation in
       the utterly brilliant website and app 
       <a href="https://habitica.com/">Habitica</a>, which 
       turns task management into an RPG game, making the whole process much more
       fun and useful, and makes me far more productive (as a side note, it is
-      similar to a somewhat cruder text game I created in high school). It 
-      provides health and xp systems for when I've completed/failed tasks,
-      as well as a neat and flexible reward system.</p>
-      <h3>Why Trello?</h3>
+      similar to a somewhat cruder text game I created in high school).</p>
       <p>Another task-management website I struggle to live without is the
-      also brilliant <a href="https://trello.com/">Trello</a>, which is very 
-      common for organizing group projects. If you haven't seen it already, it displays tasks using a pinboard-style layout, which allows tasks ("cards")
-      to be grouped by category. A user can also have multiple boards. This 
-      visual style is extremely useful for project planning and organizing tasks.</p>
-      <h3>The Syncing Dillema</h3>
-      <p>Both of these services are very good for different purposes, Trello for
-      its pinboard interface, and Habitica for its scoring, reward and social 
-      systems. However, there is currently no way of syncing tasks between these services
-      that I am aware of. The only one I could find (show link) didn't work properly for me. 
-      Luckily, both services provide HTTP APIs, so it is possible to create a 
-      web app to do the task syncing relatively easily. Common apps for this
-      kind of thing like IFTTT don't work for this case.</p>
-      <h3>Enter Tasker</h3>
-      <p>To implement this, I took the somewhat unusual step of using the Android
-      automation app Tasker (provide link). This was beacuse most people have 
-      a smartphone nowadays, which is connected to the internet most of the time. 
-      This allows it to periodically sync tasks in a way a PC cannot, and be 
-      scheduled to do so at specific times. Tasker is also relatively straightforward
-      for non-programmers to use, so using this would allow these people to 
-      customize it to their liking. Tasker provides its own JavaScript scripting
-      system, which I used to write this app. This is broken up into re-arrangeable
-      chunks, which can be used for various tasks by the user. I actually think that this 
-      approach can be applied to a wide range of web app types, to reduce our
-      unhealthy dependence on external (often large) web service companies like
-      Google and Facebook. To make development easier, I also created a simple
-      Python web server using the Bottle library (provide link)
-      
+      also brilliant <a href="https://trello.com/">Trello</a>
       <h2>2D platform Game</h2>
-      <p>Over the past year, I have been part of the Imperial College Game 
-      Development society, as part of a project building a 2D Super-Mario-syle
-      2D platform game. This is being built using the Unity platform This has helped me significantly develop my programming 
-      skills, and gave me the opportunity to learn the C# programming language. 
-      The game works by giving the player a deck of cards, which can be used to
-      clear levels. There is a great deal of flexibility in how these cards can
-      be used, and a lot of the skill involves choosing the correct cards for
-      levels, and using them in a creative way.
-      The first level (the tutorial) of this game is currently playble, with the
-      basic character and camera controls working. The card deck system is also
-      written, along with "fire" cards, which are able to spawn projectiles. 
-      Money and health systems have also been implemented. 
     </div>
   </div>
 </div>
