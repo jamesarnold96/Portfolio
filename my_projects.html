@@ -46,6 +46,7 @@ them all on seperate pages -->
       <h2 class="content-subhead">Crack Tracking System</h2>
       <h3>Using Computer vision to automatically measure of the propagation of a crack
       through a composite material.</h3>
+      <h3>Background</h3>
       <p>My most recently completed project was my 3rd year university group project.
       This was in association with FAC technology, a composite materials company in 
       Southfields (check), London. The composite materials industry is enjoying 
@@ -53,8 +54,8 @@ them all on seperate pages -->
       industries such as aerospace as a cheaper alternative to metals such as steel
       and aluminium. However, the process of designing these materials can be very 
       long and expensive, due the large number of tests required for regulatory 
-      approval. One of the most important tests is the <em>double cantilever beam test
-      (create Wikipedia link)</em>, which uses a machine to apply a force to pull 
+      approval. One of the most important tests is the <em>double cantilever beam (DCB) test
+      </em>, which uses a machine to apply a force to pull 
       apart a small strip of material. The length of the resulting crack is then
       mesured and recorded, and the graph of force versus displacement can be used 
       to determine various structural properties of the material. This process is 
@@ -65,9 +66,31 @@ them all on seperate pages -->
       measuring this crack propagation using computer vision. This was done in Python
       using the popular <a href="https://opencv.org/">OpenCV</a> computer vision
       library (provide a link). As can be 
-      seen in the video above, 
-      TODO: Provide more details.</p>
-
+      seen in the video above, the system we created works well, and when the 
+      measured displacement is plotted against the force exerted by the machine,
+      a rough linear relationship is shown, which is what is expected by this 
+      test. The scatter of the graphed points is within the 5% required by the 
+      idustry specification (check), which shows that it attains a good level of
+      accuracy. 
+      </p>
+      <h3>How it works (technical)</h3>
+      The photos taken of the test are taken by an off-the-shelf Canan EOS 70D (check)  
+      camera mounted on a tripod, with a black background behind the material 
+      sample, so only the sample is visible. The scene is well-illuminated so 
+      the sample stands out more, and is mostly white. The camera is set up to
+      take a photo every five seconds, which is saved to a folder. The code (written in Python) 
+      converts each image to binary black and white (either fully black or 
+      fully white), and uses a sequence of edge- and line-detection algorithms
+      to isolate the outline of the bar and crack. These outlines are now 
+      in white against a black background.</p>
+      <p>The crack is then found by
+      examining the end of the bar where crack started, and moving along the bar 
+      until a column of pixels is reached where there is no white between the 
+      boundaries of the bar. This method is very noise-resistant, particularly 
+      compared to what was tried initially, which involved finding the first place 
+      where there was white. Little specks of white would ruin this algorithm.</p>
+      
+      
       <h2>NeZOOMi</h2>
       <h3>Internet-of-things light-following robot for cleaning tubes<h3>
       <h3>Overview</h3>
@@ -97,6 +120,19 @@ them all on seperate pages -->
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
       
       <h2>KnockLock</h2>
+      <p>My 2nd year group project was KnockLock, a knock-pattern door unlocker
+      for poeple with hand and arm dexterity problems. When people have these 
+      conditions (such as Parkinsons), unlocking a door with a key or using a 
+      numeric keypad can become extremely difficult and time-consuming. KockLock
+      solves this by using several PiezoElectric sensors (similar to the MIDI drum kit)
+      mounted on a door. These sensors create an electric representation of the
+      vibration of the door. By comparing the intensity of the vibration between 
+      the sensors, the approximate location on the door of a knock can be detected. 
+      By knocking on the door in a specic pattern, an electric motor is triggered, 
+      which unlocks the door. The piezo sensor processing is done by an arduino 
+      microcontoller. The piezo circuits improve on the MIDI drumkit by including
+      RC filters, which prolong the "peaks" of the signal produced by striking the
+      surface. This allows the 
       <p>TODO: Find the website</p>
       
       <h2>EEBug</h2>
@@ -208,7 +244,16 @@ them all on seperate pages -->
       The first level (the tutorial) of this game is currently playble, with the
       basic character and camera controls working. The card deck system is also
       written, along with "fire" cards, which are able to spawn projectiles. 
-      Money and health systems have also been implemented. 
+      Money and health systems have also been implemented. Once the basic 
+      mechanics are implemented, I will start fleshing out the general structure
+      of the game. Some ideas I have for it are:
+      - A highly random approach to elements of the level design and upgrades,
+      so part of the skill of playing involves dealing with chance.
+      - Competetive multiplayer
+      - "MetroidVania" level style, where there is only one, continuous, large 
+      map, rather than several smaller ones. 
+      - Lewis Carroll-style fun, but surreal storyline, exploring the nature 
+      of how people view each other. 
     </div>
   </div>
 </div>
