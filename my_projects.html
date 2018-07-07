@@ -69,11 +69,13 @@ them all on seperate pages -->
 
       <h2>NeZOOMi</h2>
       <h3>Internet-of-things light-following robot for cleaning tubes<h3>
+      <h3>Overview</h3>
       <p>My second third-year project was the NeZOOMi Internet-of-things 
       light-following robot. 
       This was an adaptaion of the EEBug (TODO: provide link), to automatically
-      follow a light-source using a digital light sensor. This vehicle is 
-      intended for use in cleaning tubes and tunnels automatically, where it can
+      follow a light-source using a digital light sensor. This is a prototype of
+      a vehicle intended for use in cleaning tubes and tunnels automatically,
+      where it can
       be difficult for humans to access. It was controlled by the hugely popular
       Espressif ESP8266 WiFi microtroller, and recieved instructions from a 
       website, which also advertised and described the project. 
@@ -82,6 +84,14 @@ them all on seperate pages -->
       processed instructions from the robot, recieved user instructions,
       served the website, and displayed data. 
       </p>
+      <h3>How it Works</h3>
+      <p>The ESP8266 is programmed using the popular <a 
+      href="https://micropython.org/">MicroPython</a> microcontroller development platform, which, 
+      as the name suggests, allows you to run Python on a microcontroller, rather 
+      rather than having to use C/C++ as is customary. Python is far simpler and
+      quicker to program in than C/C++, and also reduces the chance of major 
+      bugs in the code. The microcontroller collected light level data from an 
+      i2c digital lux sensor, and communicated with a PC using the MQTT
       
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
       
@@ -89,6 +99,11 @@ them all on seperate pages -->
       <p>TODO: Find the website</p>
       
       <h2>EEBug</h2>
+      <p>My first year university group projct was to design and construct a small 
+      line-following robot within a specified time frame and budget. I was the 
+      team leader for this project, which provided me with valuable leadership 
+      experience and project planning skills. 
+      
       
       <h2>MIDI keyboard and scanning matrix tester</h2>
       <p>As you probably have gathered from the rest of this website, I really,
@@ -101,15 +116,28 @@ them all on seperate pages -->
       electronic keyboard, but making it as cheap as possible. To do this, I 
       used a broken Casio SA-46 keyboard I bought off eBay. I completely 
       stripped out the innards and gave it MIDI functionality using a £1.50
-      Arduino baord. 
+      Arduino baord. I designed a perfboard layout to make the circuit physically
+      compact and robust, so I can add more components when I wish to. I also 
+      wrote 
       </p>
       
       <h1>Projects in progress</h1>
       
       <h2>Habitica/Trello task syncing</h2>
       <h3>Using Tasker for Android</h3>
+      <p><a href="https://tasker.joaoapps.com/">Tasker</a> is a popular Android
+      task automation app, which provides its own JavaScript scripting
+      system. I used this to write an app which syncs data between the popular 
+      planning and todo apps <a href="https://habitica.com/">Habitica</a> and
+      <a href="https://trello.com/">Trello</a>. This is broken up into re-arrangeable
+      chunks, which can be used for various tasks by the user. I actually think 
+      that this 
+      approach can be applied to a wide range of web app types, to reduce our
+      unhealthy dependence on external (often large) web service companies like
+      Google and Facebook. 
       <h3>Why Habitica?</h3>
-      <p>I consider myself unfortunately overburdened with more curiosity than is probably healthy, and often find 
+      <p>I consider myself unfortunately overburdened with more curiosity than 
+      is probably healthy, and often find 
       effective time management difficult. I also struggle with planning and task
       prioritizing. Luckily, I have found salvation in
       the utterly brilliant website and app 
@@ -122,41 +150,47 @@ them all on seperate pages -->
       <h3>Why Trello?</h3>
       <p>Another task-management website I struggle to live without is the
       also brilliant <a href="https://trello.com/">Trello</a>, which is very 
-      common for organizing group projects. If you haven't seen it already, it displays tasks using a pinboard-style layout, which allows tasks ("cards")
+      common for organizing group projects. If you haven't seen it already, it 
+      displays tasks using a pinboard-style layout, which allows tasks ("cards")
       to be grouped by category. A user can also have multiple boards. This 
       visual style is extremely useful for project planning and organizing tasks.</p>
       <h3>The Syncing Dillema</h3>
       <p>Both of these services are very good for different purposes, Trello for
       its pinboard interface, and Habitica for its scoring, reward and social 
-      systems. However, there is currently no way of syncing tasks between these services
-      that I am aware of. The only one I could find (show link) didn't work properly for me. 
-      Luckily, both services provide HTTP APIs, so it is possible to create a 
+      systems. However, there is currently no way of syncing tasks between these
+      services that I am aware of. The 
+      <a href="https://github.com/DC23/scriptabit">only one I could find</a> 
+      didn't work properly for me. Luckily, both services provide HTTP APIs, so
+      it is possible to create a 
       web app to do the task syncing relatively easily. Common apps for this
       kind of thing like IFTTT don't work for this case.</p>
       <h3>Enter Tasker</h3>
       <p>To implement this, I took the somewhat unusual step of using the Android
-      automation app Tasker (provide link). This was beacuse most people have 
+      automation app <a href="https://tasker.joaoapps.com/">Tasker</a>. This was beacuse most people have 
       a smartphone nowadays, which is connected to the internet most of the time. 
       This allows it to periodically sync tasks in a way a PC cannot, and be 
-      scheduled to do so at specific times. Tasker is also relatively straightforward
+      scheduled to do so at specific times. Importantly, Tasker is also straightforward
       for non-programmers to use, so using this would allow these people to 
-      customize it to their liking. Tasker provides its own JavaScript scripting
-      system, which I used to write this app. This is broken up into re-arrangeable
-      chunks, which can be used for various tasks by the user. I actually think that this 
-      approach can be applied to a wide range of web app types, to reduce our
-      unhealthy dependence on external (often large) web service companies like
-      Google and Facebook. To make development easier, I also created a simple
-      Python web server using the Bottle library (provide link)
+      customize it to their liking. To make development easier, I also created a simple
+      Python web server using the <a href="http://bottlepy.org/docs/dev/">Bottle 
+      library</a>, which allows Tasker routines to be tested on a PC, 
+      substatially speeding up the development and debugging process.</p>
+      <h3>Current Status</h3>
+      <p>The functions for getting the task data from the internet are complete,
+      as is the test site and server. The actual syncing code, along with code 
+      to upload the new data to the websites, is still in progress.</p>
       
       <h2>2D platform Game</h2>
       <p>Over the past year, I have been part of the Imperial College Game 
       Development society, as part of a project building a 2D Super-Mario-syle
-      2D platform game. This is being built using the Unity platform This has helped me significantly develop my programming 
+      2D platform game. This is being built using the Unity platform This has 
+      helped me significantly develop my programming 
       skills, and gave me the opportunity to learn the C# programming language. 
       The game works by giving the player a deck of cards, which can be used to
       clear levels. There is a great deal of flexibility in how these cards can
       be used, and a lot of the skill involves choosing the correct cards for
       levels, and using them in a creative way.
+      <h3>Current Status</h3>
       The first level (the tutorial) of this game is currently playble, with the
       basic character and camera controls working. The card deck system is also
       written, along with "fire" cards, which are able to spawn projectiles. 
