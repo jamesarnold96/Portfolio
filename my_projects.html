@@ -95,7 +95,13 @@ them all on seperate pages -->
       required a strong grasp of control theory, particularly PID control systems, to stop
       the motor ocsillating, or becoming unstable and stuck on maximum speed.</p>
       <p>The microcontroller was a Texas Instruments STM32 chip running on the 
-      <a href="https://www.mbed.com/en/">ARM Mbed
+      <a href="https://www.mbed.com/en/">ARM Mbed</a> platform. Running the 
+      motor controller and the bictoin hash generator required the use of a 
+      real-time operating system, to manage the two taks concurrently in 
+      seperate threads. Special code was required to enable threads to communicate
+      without blocking the whole program. This can be very important in 
+      mission-critical applications. All the code was run in C++, which is very
+      common in embedded systems due to its good performance.</p>
       
       
       <h2>KnockLock</h2>
