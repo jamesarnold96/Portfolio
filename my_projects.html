@@ -139,63 +139,6 @@ them all on seperate pages -->
       
       <h1>Projects in progress</h1>
       
-      <h2>Habitica/Trello task syncing</h2>
-      <h3>Using Tasker for Android</h3>
-      <p><a href="https://tasker.joaoapps.com/">Tasker</a> is a popular Android
-      task automation app, which provides its own JavaScript scripting
-      system. I used this to write an app which syncs data between the popular 
-      planning and todo apps <a href="https://habitica.com/">Habitica</a> and
-      <a href="https://trello.com/">Trello</a>. This is broken up into re-arrangeable
-      chunks, which can be used for various tasks by the user. I actually think 
-      that this 
-      approach can be applied to a wide range of web app types, to reduce our
-      unhealthy dependence on external (often large) web service companies like
-      Google and Facebook. 
-      <h3>Why Habitica?</h3>
-      <p>I consider myself unfortunately overburdened with more curiosity than 
-      is probably healthy, and often find 
-      effective time management difficult. I also struggle with planning and task
-      prioritizing. Luckily, I have found salvation in
-      the utterly brilliant website and app 
-      <a href="https://habitica.com/">Habitica</a>, which 
-      turns task management into an RPG game, making the whole process much more
-      fun and useful, and makes me far more productive (as a side note, it is
-      similar to a somewhat cruder text game I created in high school). It 
-      provides health and xp systems for when I've completed/failed tasks,
-      as well as a neat and flexible reward system.</p>
-      <h3>Why Trello?</h3>
-      <p>Another task-management website I struggle to live without is the
-      also brilliant <a href="https://trello.com/">Trello</a>, which is very 
-      common for organizing group projects. If you haven't seen it already, it 
-      displays tasks using a pinboard-style layout, which allows tasks ("cards")
-      to be grouped by category. A user can also have multiple boards. This 
-      visual style is extremely useful for project planning and organizing tasks.</p>
-      <h3>The Syncing Dillema</h3>
-      <p>Both of these services are very good for different purposes, Trello for
-      its pinboard interface, and Habitica for its scoring, reward and social 
-      systems. However, there is currently no way of syncing tasks between these
-      services that I am aware of. The 
-      <a href="https://github.com/DC23/scriptabit">only one I could find</a> 
-      didn't work properly for me. Luckily, both services provide HTTP APIs, so
-      it is possible to create a 
-      web app to do the task syncing relatively easily. Common apps for this
-      kind of thing like IFTTT don't work for this case.</p>
-      <h3>Enter Tasker</h3>
-      <p>To implement this, I took the somewhat unusual step of using the Android
-      automation app <a href="https://tasker.joaoapps.com/">Tasker</a>. This was beacuse most people have 
-      a smartphone nowadays, which is connected to the internet most of the time. 
-      This allows it to periodically sync tasks in a way a PC cannot, and be 
-      scheduled to do so at specific times. Importantly, Tasker is also straightforward
-      for non-programmers to use, so using this would allow these people to 
-      customize it to their liking. To make development easier, I also created a simple
-      Python web server using the <a href="http://bottlepy.org/docs/dev/">Bottle 
-      library</a>, which allows Tasker routines to be tested on a PC, 
-      substatially speeding up the development and debugging process.</p>
-      <h3>Current Status</h3>
-      <p>The functions for getting the task data from the internet are complete,
-      as is the test site and server. The actual syncing code, along with code 
-      to upload the new data to the websites, is still in progress.</p>
-      
       <h2>2D platform Game</h2>
       <p>Over the past year, I have been part of the Imperial College Game 
       Development society, as part of a project building a 2D Super-Mario-syle
