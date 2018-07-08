@@ -78,6 +78,25 @@ them all on seperate pages -->
       arrow keys.</p>
       
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
+      <p>My second 3rd-year project was an embedded systems project to write the
+      software for a brushless motor controller. The code needed to be able to 
+      make the motor rotate a set number of rotations, which had to be significantly
+      accurate. This was set by the user, who could also control the maximum 
+      rotational velocity of the motor. Whilst this was going on, the 
+      microcontroller also computed bitcoin hashes in the background.</p>
+      
+      <h3>How it Works</h3>
+      <p>The brushless motor works by a series of electromagnets around the motor
+      being magnetized in sequence, attracting the magnetic rotor to be attracted
+      to them. The position of the rotor was measured using a series of infrared
+      LEDs and sensors. The rotor had a large slot in it, so when the slot 
+      passed over an LED, the sensor would no longer detect a signal. 
+      Using this information to control the motor (a closed-loop feedback system)
+      required a strong grasp of control theory, particularly PID control systems, to stop
+      the motor ocsillating, or becoming unstable and stuck on maximum speed.</p>
+      <p>The microcontroller was a Texas Instruments STM32 chip running on the 
+      <a href="https://www.mbed.com/en/">ARM Mbed
+      
       
       <h2>KnockLock</h2>
       <p>My 2nd year group project was KnockLock, a knock-pattern door unlocker
