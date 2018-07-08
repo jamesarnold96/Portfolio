@@ -42,64 +42,7 @@ them all on seperate pages -->
       <h1>Completed Projects</h1>
       </div>
       
-    <div class="content">
-      <h2 class="content-subhead">Crack Tracking System</h2>
-      <h3>Using Computer vision to automatically measure of the propagation of a crack
-      through a composite material.</h3>
-      <h3>Background</h3>
-      <p>My most recently completed project was my 3rd year university group project.
-      This was in association with FAC technology, a composite materials company in 
-      Southfields (check), London. The composite materials industry is enjoying 
-      phenominal gvrowth at the moment, as these materials are increasing adapted in
-      industries such as aerospace as a cheaper alternative to metals such as steel
-      and aluminium. However, the process of designing these materials can be very 
-      long and expensive, due the large number of tests required for regulatory 
-      approval. One of the most important tests is the <em>double cantilever beam (DCB) test
-      </em>, which uses a machine to apply a force to pull 
-      apart a small strip of material. The length of the resulting crack is then
-      mesured and recorded, and the graph of force versus displacement can be used 
-      to determine various structural properties of the material. This process is 
-      currently undertaken by a human observer manually using a microscope, making it 
-      a significantly labour-intensive and expensive. </p>
-      
-      <p>I was part of a team of four who worked to create an automated system for 
-      measuring this crack propagation using computer vision. This was done in Python
-      using the popular <a href="https://opencv.org/">OpenCV</a> computer vision
-      library (provide a link). As can be 
-      seen in the video above, the system we created works well, and when the 
-      measured displacement is plotted against the force exerted by the machine,
-      a rough linear relationship is shown, which is what is expected by this 
-      test. The scatter of the graphed points is within the 5% required by the 
-      idustry specification (check), which shows that it attains a good level of
-      accuracy. 
-      </p>
-      <h3>How it works (technical)</h3>
-      The photos taken of the test are taken by an off-the-shelf Canan EOS 70D (check)  
-      camera mounted on a tripod, with a black background behind the material 
-      sample, so only the sample is visible. The scene is well-illuminated so 
-      the sample stands out more, and is mostly white. The camera is set up to
-      take a photo every five seconds, which is saved to a folder. The code (written in Python) 
-      converts each image to binary black and white (either fully black or 
-      fully white), and uses a sequence of edge- and line-detection algorithms
-      to isolate the outline of the bar and crack. These outlines are now 
-      in white against a black background.</p>
-      <p>The crack is then found by
-      examining the end of the bar where crack started, and moving along the bar 
-      until a column of pixels is reached where there is no white between the 
-      boundaries of the bar. This method is very noise-resistant, particularly 
-      compared to what was tried initially, which involved finding the first place 
-      where there was white. Even the smallest specks of white noise would ruin 
-      this algorithm.
-      One the coordinates of the tip are found, a vertival line is drawn at
-      this point on a copy of the original image, thus clearly showing the 
-      crack location for a human observer. Another set of python code automatically
-      collects the data from the machine, and all the results end up in a CSV
-      format, making it easy to plot Excel graphs for. For very long tests, such
-      as fatigue testing, since there doesn't have to be a human observer, the
-      frequency of measurements can be massively increased, increasing the 
-      accuracy of the data.</p>
-      
-      
+    <div class="content">     
       <h2>NeZOOMi</h2>
       <h3>Internet-of-things light-following robot for cleaning tubes<h3>
       <h3>Overview</h3>
