@@ -92,7 +92,12 @@ them all on seperate pages -->
       this algorithm.
       One the coordinates of the tip are found, a vertival line is drawn at
       this point on a copy of the original image, thus clearly showing the 
-      crack location for a human observer.</p>
+      crack location for a human observer. Another set of python code automatically
+      collects the data from the machine, and all the results end up in a CSV
+      format, making it easy to plot Excel graphs for. For very long tests, such
+      as fatigue testing, since there doesn't have to be a human observer, the
+      frequency of measurements can be massively increased, increasing the 
+      accuracy of the data.</p>
       
       
       <h2>NeZOOMi</h2>
@@ -110,16 +115,26 @@ them all on seperate pages -->
       <a href="NeZOOMi/home.html">This website can be viewed here.</a> My role 
       in this project was to create the website and the Python server which 
       processed instructions from the robot, recieved user instructions,
-      served the website, and displayed data. 
-      </p>
+      served the website, and displayed data.</p>
+      
       <h3>How it Works</h3>
       <p>The ESP8266 is programmed using the popular <a 
-      href="https://micropython.org/">MicroPython</a> microcontroller development platform, which, 
-      as the name suggests, allows you to run Python on a microcontroller, rather 
-      rather than having to use C/C++ as is customary. Python is far simpler and
-      quicker to program in than C/C++, and also reduces the chance of major 
-      bugs in the code. The microcontroller collected light level data from an 
-      i2c digital lux sensor, and communicated with a PC using the MQTT
+      href="https://micropython.org/">MicroPython</a> microcontroller 
+      development platform, which, as the name suggests, allows you to run 
+      Python on a microcontroller, rather rather than having to use C/C++ as is       
+      customary. Python is far simpler and quicker to program in than C/C++,
+      and also reduces the chance of major 
+      bugs in the code. The microcontroller collects light level data from an 
+      i2c digital lux sensor, and communicats with a PC using the MQTT protocol.
+      A Python server running on the PC processes data both from the vehicle 
+      and the website. The website backend uses the lovely minimalist web 
+      framework <a href="http://bottlepy.org/docs/dev/">Bottle</a> framework 
+      to route URLs and process HTTP requests.</p> 
+      <p>The website allows the previous 20 light level readins to be displayed
+      as a table on the site. It also contains an option to override the default,
+      light-following vehicle controls and take manaual control, as can be 
+      seen in the video below. The vehicle can now be sterred by the PC's 
+      arrow keys.</p>
       
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
       
@@ -128,11 +143,13 @@ them all on seperate pages -->
       for poeple with hand and arm dexterity problems. When people have these 
       conditions (such as Parkinsons), unlocking a door with a key or using a 
       numeric keypad can become extremely difficult and time-consuming. KockLock
-      solves this by using several PiezoElectric sensors (similar to the MIDI drum kit)
-      mounted on a door. These sensors create an electric representation of the
-      vibration of the door. By comparing the intensity of the vibration between 
-      the sensors, the approximate location on the door of a knock can be detected. 
-      By knocking on the door in a specic pattern, an electric motor is triggered, 
+      solves this by using several PiezoElectric sensors (similar a 
+      <a href="https://github.com/jamesarnold96/Foam_Drumkit">>MIDI drum kit</a>
+      I once built) mounted on a door. These sensors create an electric 
+      representation of the vibration of the door. By comparing the intensity of 
+      the vibration between the sensors, the approximate location on the door of 
+      a knock can be detected. By knocking on the door in a specic pattern, an 
+      electric motor is triggered, 
       which unlocks the door. The piezo sensor processing is done by an arduino 
       microcontoller. The piezo circuits improve on the MIDI drumkit by including
       RC filters, which prolong the "peaks" of the signal produced by striking the
@@ -175,8 +192,7 @@ them all on seperate pages -->
       probably write a smartphone app to accompany it at some point as well, as
       putting a powerful processor and a large screen in a keyboard seems like a 
       waste of time when everyone already has these things with them in their 
-      pockets already. 
-      </p>
+      pockets already.</p>
       
       <h1>Projects in progress</h1>
       
@@ -262,7 +278,8 @@ them all on seperate pages -->
         map, rather than several smaller ones.</li>
         <li>Lewis Carroll-style fun, but surreal storyline, exploring the nature 
         of how people view each other.</li>
-      </ul></p>
+      </ul>
+      </p>
     </div>
   </div>
 </div>
