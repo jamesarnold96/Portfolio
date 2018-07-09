@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Completed Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="side-menu.css">
+  <link rel="stylesheet" href="pure.css">
+</head>
+<!-- TODO: Add a submenu to make Navigating this long page easier. Or, just put
+them all on seperate pages -->
+<body>
+<div id="layout">
+  <!-- Menu toggle -->
+  <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+  </a>
+
+    <div id="menu">
+    <div class="pure-menu">
+      <a class="pure-menu-heading" href="index.html">James Arnold</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="my_projects.html" class="pure-menu-link">
+        Conpleted Projects</a></li>
+        <li class="pure-menu-item"><a href="in_progress.html" class="pure-menu-link">
+        Projects in Progress</a></li>            
+        <li class="pure-menu-item"><a href="experience.html" class="pure-menu-link">
+        Experience</a></li>
+		<li class="pure-menu-item"><a href="music.html" class="pure-menu-link">
+        Music</a></li>
+        <li class="pure-menu-item"><a href="about_me.html" class="pure-menu-link">
+        More About Me</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="main">
+    <div class="header">
+      <h1>KnockLock</h1>
+	  <h3>Improving the Lives of Those With Dexterity Issues</h3>
+    </div>
+      
+    <div class="content">
+	  <iframe allowfullscreen frameborder="0" height="315" mozallowfullscreen 
+	  src="https://www.youtube.com/embed/9a7YVxpA8rk" 
+	  webkitallowfullscreen width="560"></iframe>
+
+      <p>My 2nd year group project was KnockLock, a knock-pattern door unlocker
+      for poeple with hand and arm dexterity problems. When people have these 
+      conditions (such as Parkinsons), unlocking a door with a key or using a 
+      numeric keypad can become extremely difficult and time-consuming. KockLock
+      solves this by using several PiezoElectric sensors (similar to a 
+      <a href="https://github.com/jamesarnold96/Foam_Drumkit">MIDI drum kit</a>
+      I once built) mounted on a door. These sensors create an electric 
+      representation of the vibration of the door. By comparing the intensity of 
+      the vibration between the sensors, the approximate location on the door of 
+      a knock can be detected.</p> 
+	  <p>By knocking on the door in a specic pattern, an 
+      electric motor is triggered, which unlocks the door. The piezo sensor processing
+      is done by an arduino microcontoller. The piezo circuits improve on the MIDI
+      drumkit by including RC filters, which prolong the "peaks" of the signal
+      produced by striking the surface. This allows the intensity measurement to be far
+      more accurate, as the sampling frequency of the Arduino is sometimes too
+      low to detect particularly short peaks.</p>
+      
+      <p>A website explaining this project in full detail was made for this project, 
+	  and can be found <a href="http://www.ee.ic.ac.uk/zhongxuan.li15/yr2proj/default.html">
+	  here</a>.</p>
+    </div>
+  </div>
+</div>
+</body>
+<script src="ui.js"></script>
+</html>

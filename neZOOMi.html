@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>My Projectss</title>
+  <title>neZOOMi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="side-menu.css">
   <link rel="stylesheet" href="pure.css">
@@ -19,15 +19,17 @@ them all on seperate pages -->
 
     <div id="menu">
     <div class="pure-menu">
-      <a class="pure-menu-heading" href="profile.html">James Arnold</a>
+      <a class="pure-menu-heading" href="index.html">James Arnold</a>
       <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="completed_projects.html" class="pure-menu-link">
+        <li class="pure-menu-item"><a href="my_projects.html" class="pure-menu-link">
         Conpleted Projects</a></li>
-        <li class="pure-menu-item"><a href="in_progress" class="pure-menu-link">
+        <li class="pure-menu-item"><a href="in_progress.html" class="pure-menu-link">
         Projects in Progress</a></li>            
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">
+        <li class="pure-menu-item"><a href="experience.html" class="pure-menu-link">
         Experience</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">
+		<li class="pure-menu-item"><a href="music.html" class="pure-menu-link">
+        Music</a></li>
+        <li class="pure-menu-item"><a href="about_me.html" class="pure-menu-link">
         More About Me</a></li>
       </ul>
     </div>
@@ -35,13 +37,13 @@ them all on seperate pages -->
   
   <div id="main">
     <div class="header">
-      <h1>Completed Projects</h1>
-      </div>
+      <h1>NeZOOMi</h1>
+	  <h3>Internet-of-things light-following robot for cleaning tubes<h3>
+    </div>
       
-    <div class="content">     
-      <h2>NeZOOMi</h2>
-      <h3>Internet-of-things light-following robot for cleaning tubes<h3>
-      <h3>Overview</h3>
+    <div class="content">      
+	  <img src="img/bug_side1.jpg" alt="NeZOOMi side view">
+	  <h3>Overview</h3>
       <p>My second third-year project was the NeZOOMi Internet-of-things 
       light-following robot. 
       This was an adaptaion of the EEBug (TODO: provide link), to automatically
@@ -55,6 +57,9 @@ them all on seperate pages -->
       in this project was to create the website and the Python server which 
       processed instructions from the robot, recieved user instructions,
       served the website, and displayed data.</p>
+	  
+	  <a href="https://github.com/jamesarnold96/Embedded_Systems_Coursework"><span><img src="img/github.png">
+	  View on GitHub</img></span></a> 
       
       <h3>How it Works</h3>
       <p>The ESP8266 is programmed using the popular <a 
@@ -74,10 +79,16 @@ them all on seperate pages -->
       light-following vehicle controls and take manaual control, as can be 
       seen in the video below. The vehicle can now be sterred by the PC's 
       arrow keys.</p>
+	  
+	  <video width="640" height="360" controls>
+		<source src="img/bug_video2.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
       </ul>
       </p>
     </div>
   </div>
 </div>
 </body>
+<script src="ui.js"></script>
 </html>

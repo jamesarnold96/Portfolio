@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Completed Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="side-menu.css">
+  <link rel="stylesheet" href="pure.css">
+</head>
+<!-- TODO: Add a submenu to make Navigating this long page easier. Or, just put
+them all on seperate pages -->
+<body>
+<div id="layout">
+  <!-- Menu toggle -->
+  <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+  </a>
+
+    <div id="menu">
+    <div class="pure-menu">
+      <a class="pure-menu-heading" href="index.html">James Arnold</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="my_projects.html" class="pure-menu-link">
+        Conpleted Projects</a></li>
+        <li class="pure-menu-item"><a href="in_progress.html" class="pure-menu-link">
+        Projects in Progress</a></li>            
+        <li class="pure-menu-item"><a href="experience.html" class="pure-menu-link">
+        Experience</a></li>
+        <li class="pure-menu-item"><a href="about_me.html" class="pure-menu-link">
+        More About Me</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="main">
+    <div class="header">
+      <h1>EEBug</h1>
+	  <h3>Line Following Robot</h3>
+    </div>
+      
+    <div class="content">
+      <p>My first year university group projct was to design and construct a small 
+      line-following robot within a specified time frame and budget. I was the 
+      team leader for this project, which provided me with valuable leadership 
+      experience and project planning skills. The robot had to follow a line drawn
+	  onto a sheet of paper, continue for bit, spiral, and then stop.</p>
+	  <h3>How it works</h3>
+	  <p>The EEBug was controlled by a microcontroller, specifically an Atmel ATTiny85.
+	  This was used as the number of microcontoller pins allowed was limited. The ATTiny
+	  was programmed using the popular Arduino platform. To detect the line, a pair of 
+	  infrared light detectors were mounted on the front of the bug, to detect the intensity 
+	  light reflected from the surface below by some infrared LEDs. The black line 
+	  would reflefct less than the white, meaning that the robot could always move 
+	  towards the black. When the line stopped, the move straight and spiral routines
+	  were triggered. A buzzer, which played small tunes at the stop and start rounded
+	  it off with a bit of flair.</p> 
+   
+    </div>
+  </div>
+</div>
+</body>
+<script src="ui.js"></script>
+</html>
