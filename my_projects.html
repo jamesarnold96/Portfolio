@@ -41,42 +41,6 @@ them all on seperate pages -->
       </div>
       
     <div class="content">     
-      <h2>NeZOOMi</h2>
-      <h3>Internet-of-things light-following robot for cleaning tubes<h3>
-      <h3>Overview</h3>
-      <p>My second third-year project was the NeZOOMi Internet-of-things 
-      light-following robot. 
-      This was an adaptaion of the EEBug (TODO: provide link), to automatically
-      follow a light-source using a digital light sensor. This is a prototype of
-      a vehicle intended for use in cleaning tubes and tunnels automatically,
-      where it can
-      be difficult for humans to access. It was controlled by the hugely popular
-      Espressif ESP8266 WiFi microtroller, and recieved instructions from a 
-      website, which also advertised and described the project. 
-      <a href="NeZOOMi/home.html">This website can be viewed here.</a> My role 
-      in this project was to create the website and the Python server which 
-      processed instructions from the robot, recieved user instructions,
-      served the website, and displayed data.</p>
-      
-      <h3>How it Works</h3>
-      <p>The ESP8266 is programmed using the popular <a 
-      href="https://micropython.org/">MicroPython</a> microcontroller 
-      development platform, which, as the name suggests, allows you to run 
-      Python on a microcontroller, rather rather than having to use C/C++ as is       
-      customary. Python is far simpler and quicker to program in than C/C++,
-      and also reduces the chance of major 
-      bugs in the code. The microcontroller collects light level data from an 
-      i2c digital lux sensor, and communicats with a PC using the MQTT protocol.
-      A Python server running on the PC processes data both from the vehicle 
-      and the website. The website backend uses the lovely minimalist web 
-      framework <a href="http://bottlepy.org/docs/dev/">Bottle</a> framework 
-      to route URLs and process HTTP requests.</p> 
-      <p>The website allows the previous 20 light level readins to be displayed
-      as a table on the site. It also contains an option to override the default,
-      light-following vehicle controls and take manaual control, as can be 
-      seen in the video below. The vehicle can now be sterred by the PC's 
-      arrow keys.</p>
-      
       <h2>Brushless motor controler/Bitcoin hash generator</h2>
       <p>My second 3rd-year project was an embedded systems project to write the
       software for a brushless motor controller. The code needed to be able to 
@@ -159,36 +123,6 @@ them all on seperate pages -->
       putting a powerful processor and a large screen in a keyboard seems like a 
       waste of time when everyone already has these things with them in their 
       pockets already.</p>
-      
-      <h1>Projects in progress</h1>
-      
-      <h2>2D platform Game</h2>
-      <p>Over the past year, I have been part of the Imperial College Game 
-      Development society, as part of a project building a 2D Super-Mario-syle
-      2D platform game. This is being built using the Unity platform This has 
-      helped me significantly develop my programming 
-      skills, and gave me the opportunity to learn the C# programming language. 
-      The game works by giving the player a deck of cards, which can be used to
-      clear levels. There is a great deal of flexibility in how these cards can
-      be used, and a lot of the skill involves choosing the correct cards for
-      levels, and using them in a creative way.
-      <h3>Current Status</h3>
-      <p>The first level (the tutorial) of this game is currently playble, with the
-      basic character and camera controls working. The card deck system is also
-      written, along with "fire" cards, which are able to spawn projectiles. 
-      Money and health systems have also been implemented. Once the basic 
-      mechanics are implemented, I will start fleshing out the general structure
-      of the game. Some ideas I have for it are:
-      <ul>
-        <li>A highly random approach to elements of the level design and upgrades,
-        so part of the skill of playing involves dealing with chance.</li>
-        <li>Competetive multiplayer</li>
-        <li>"MetroidVania" level style, where there is only one, continuous, large 
-        map, rather than several smaller ones.</li>
-        <li>Lewis Carroll-style fun, but surreal storyline, exploring the nature 
-        of how people view each other.</li>
-      </ul>
-      </p>
     </div>
   </div>
 </div>
